@@ -32,7 +32,7 @@ async function connect() {
 		includeMethod: true,
 	});
 	app.use(metricsMiddleware);
-
+	app.options('*',cors());
 	app.use(cors());
 	app.use(bp.json());
 

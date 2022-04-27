@@ -24,6 +24,7 @@ async function connect() {
 	
 
 	const options = {
+		origin: "*"
 	};
 
 	console.log("Application started: " + port);
@@ -32,7 +33,6 @@ async function connect() {
 		includeMethod: true,
 	});
 	app.use(metricsMiddleware);
-	app.options('*',cors());
 	app.use(cors());
 	app.use(bp.json());
 

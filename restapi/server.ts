@@ -33,7 +33,7 @@ async function connect() {
 		includeMethod: true,
 	});
 	app.use(metricsMiddleware);
-	app.use(cors());
+	app.use(cors(options));
 	app.use(bp.json());
 
 	await restapi(app);

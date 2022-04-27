@@ -15,7 +15,7 @@ ENV MONGO_URI=$MONGO_URI
 RUN npm install
 # bundle app source
 COPY server.ts ./
-COPY ./routers/api.ts ./routers/solid.ts  ./routers
+COPY ./routers/api.ts ./routers/solid.ts  ./routers/
 ADD model ./model
 ADD SOLID ./SOLID
 ADD util ./util
